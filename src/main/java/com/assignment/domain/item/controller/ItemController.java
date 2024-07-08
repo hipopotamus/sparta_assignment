@@ -1,8 +1,8 @@
-package com.assignment.domain.controller;
+package com.assignment.domain.item.controller;
 
 import com.assignment.domain.dto.*;
-import com.assignment.domain.entity.Item;
-import com.assignment.domain.sevice.ItemService;
+import com.assignment.domain.item.dto.*;
+import com.assignment.domain.item.sevice.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

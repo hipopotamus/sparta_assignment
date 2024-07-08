@@ -1,6 +1,6 @@
-package com.assignment.domain.repository;
+package com.assignment.domain.item.repository;
 
-import com.assignment.domain.entity.Item;
+import com.assignment.domain.item.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

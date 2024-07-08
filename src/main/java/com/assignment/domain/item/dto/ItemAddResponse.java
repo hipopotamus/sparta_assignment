@@ -1,6 +1,6 @@
-package com.assignment.domain.dto;
+package com.assignment.domain.item.dto;
 
-import com.assignment.domain.entity.Item;
+import com.assignment.domain.item.entity.Item;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

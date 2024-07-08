@@ -1,6 +1,6 @@
-package com.assignment.domain.dto;
+package com.assignment.domain.item.dto;
 
-import com.assignment.domain.entity.Item;
+import com.assignment.domain.item.entity.Item;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,9 +10,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemModifyResponse {
+public class ItemDetailsResponse {
 
     long id;
+
+    String username;
 
     String title;
 
@@ -20,15 +22,13 @@ public class ItemModifyResponse {
 
     int price;
 
-    String username;
-
-    public static ItemModifyResponse of(Item item) {
-        return ItemModifyResponse.builder()
+    public static ItemDetailsResponse of(Item item) {
+        return ItemDetailsResponse.builder()
                 .id(item.getId())
+                .username(item.getUsername())
                 .title(item.getTitle())
                 .content(item.getContent())
                 .price(item.getPrice())
-                .username(item.getUsername())
                 .build();
     }
 }

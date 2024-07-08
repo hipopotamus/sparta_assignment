@@ -1,8 +1,9 @@
-package com.assignment.domain.sevice;
+package com.assignment.domain.item.sevice;
 
 import com.assignment.domain.dto.*;
-import com.assignment.domain.entity.Item;
-import com.assignment.domain.repository.ItemRepository;
+import com.assignment.domain.item.dto.*;
+import com.assignment.domain.item.entity.Item;
+import com.assignment.domain.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
