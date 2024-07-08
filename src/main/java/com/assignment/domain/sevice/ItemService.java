@@ -42,5 +42,12 @@ public class ItemService {
         return ItemModifyResponse.of(modifiyItem);
     }
 
+    @Transactional
+    public void deleteItem(long id) {
+        Item item = itemRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Item not found"));
+        itemRepository.delete(item);
+    }
+
 
 }

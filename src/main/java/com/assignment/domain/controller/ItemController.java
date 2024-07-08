@@ -39,5 +39,11 @@ public class ItemController {
         return new ResponseEntity<>(itemModifyResponse, HttpStatus.OK);
     }
 
+    @DeleteMapping("/post/{id}")
+    public ResponseEntity<String> itemDelete(@PathVariable Long id) {
+        itemService.deleteItem(id);
+
+        return new ResponseEntity<>("삭제완료", HttpStatus.OK);
+    }
 
 }
