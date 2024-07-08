@@ -9,6 +9,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Optional;
+
 @Entity
 @Getter
 @Builder
@@ -28,4 +30,11 @@ public class Item {
     int price;
 
     String username;
+
+    public void modify(Item modifiedItem) {
+        Optional.ofNullable(modifiedItem.getTitle()).ifPresent(title -> this.title = title);
+        Optional.ofNullable(modifiedItem.getContent()).ifPresent(content -> this.content = content);
+        Optional.of(modifiedItem.getPrice()).ifPresent(price -> this.price = price);
+        Optional.ofNullable(modifiedItem.getUsername()).ifPresent(username -> this.username = username);
+    }
 }
